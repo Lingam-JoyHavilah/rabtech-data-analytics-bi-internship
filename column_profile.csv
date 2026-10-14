@@ -1,0 +1,10 @@
+column,dtype,missing_count,missing_pct,distinct_non_null
+order_id,string,0,0.0,11
+order_date,object,1,8.33,10
+customer_segment,object,0,0.0,4
+city,object,1,8.33,7
+category,object,0,0.0,3
+quantity,object,0,0.0,5
+unit_price,int64,0,0.0,3
+discount_pct,float64,1,8.33,5
+payment_status,object,0,0.0,5
