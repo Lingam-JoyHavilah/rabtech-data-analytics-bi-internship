@@ -1,0 +1,11 @@
+rule_id,field,dimension,failed_records,records_tested,pass_rate_pct,threshold,severity,status,detail
+DQ-01,order_id,Completeness,0,12,100.0,100% required,Critical,PASS,Missing/blank order IDs
+DQ-02,order_id,Uniqueness,2,12,83.33,No duplicate IDs,Critical,FAIL,Counts rows participating in duplicate IDs
+DQ-03,order_date,Validity,6,12,50.0,100% valid dates in range,High,FAIL,"Unparseable, missing, too early, or future dates"
+DQ-04,customer_segment,Domain,0,12,100.0,Allowed normalized values only,High,PASS,Unknown or missing customer segment
+DQ-05,city,Completeness,1,12,91.67,>=99% (target 100%),Medium,FAIL,Missing/blank billing city
+DQ-06,category,Domain,0,12,100.0,Allowed categories only,High,PASS,Unknown or missing category
+DQ-07,quantity,Type/range,2,12,83.33,Whole number > 0,Critical,FAIL,"Non-numeric, fractional, zero, or negative quantity"
+DQ-08,unit_price,Range,0,12,100.0,Numeric INR amount >= 0,High,PASS,Invalid or negative unit price
+DQ-09,discount_pct,Range/completeness,2,12,83.33,0–100; missing needs approved policy,High,FAIL,Missing or out-of-range discount
+DQ-10,payment_status,Domain,0,12,100.0,Allowed normalized statuses only,High,PASS,Unknown or missing payment status
